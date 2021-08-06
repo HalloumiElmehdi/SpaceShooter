@@ -8,7 +8,7 @@ import com.badlogic.gdx.utils.Array;
 public final class ScrollingBackground{
     private static ScrollingBackground instance;
     private float scroll;
-    private Array<Texture> layers;
+    private final Array<Texture> layers;
     private final float LAYER_SPEED_DIFFERENCE = 1f;
 
     float x,y,width, height,scaleX,scaleY;
@@ -24,7 +24,6 @@ public final class ScrollingBackground{
         }
         scroll = 0;
         speed = 0;
-
         x = y = originX = originY = rotation = srcY = 0;
         width =  Gdx.graphics.getWidth();
         height = Gdx.graphics.getHeight();
@@ -49,9 +48,6 @@ public final class ScrollingBackground{
         scroll+= speed;
     }
 
-    public float getSpeed(){
-        return this.speed;
-    }
     public void draw(Batch batch) {
         for(int i = 0;i<layers.size;i++) {
             srcX = scroll + i*this.LAYER_SPEED_DIFFERENCE *scroll;

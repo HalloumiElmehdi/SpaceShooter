@@ -10,10 +10,10 @@ import com.badlogic.gdx.math.Rectangle;
 
 public class Explosion {
 
-    private Animation<TextureRegion> explosionAnimation;
+    private final Animation<TextureRegion> explosionAnimation;
     private float explosionTimer;
 
-    private Rectangle boundingBox;
+    private final Rectangle boundingBox;
 
     Explosion(Texture texture, Rectangle boundingBox, float totalAnimationTime) {
         this.boundingBox = boundingBox;

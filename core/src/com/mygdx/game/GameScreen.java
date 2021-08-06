@@ -17,7 +17,7 @@ import java.util.Locale;
 
 class GameScreen implements Screen {
     //graphics
-    private SpriteBatch batch;
+    private final SpriteBatch batch;
     private BitmapFont font;
     private BitmapFont fontTime;
     float hudVerticalMargin, hudLeftX, hudRightX, hudCentreX, hudRow1Y, hudRow2Y, hudSectionWidth;
@@ -30,8 +30,8 @@ class GameScreen implements Screen {
     private final int WORLD_WIDTH = 1280;
     private final int WORLD_HEIGHT = 720;
 
-    private Player player;
-    private ScrollingBackground parallaxBackground;
+    private final Player player;
+    private final ScrollingBackground parallaxBackground;
 
     // inverse span count
     private static int level;
@@ -45,7 +45,7 @@ class GameScreen implements Screen {
     private boolean isPause = false;
     private boolean gameOver = false;
     private boolean blink = false ;
-    private float blinkTimePause = 0.5f;
+
     private float blinkTimeCounter;
     // Enemy list
     LinkedList<Enemy> enemyList;
@@ -54,7 +54,12 @@ class GameScreen implements Screen {
     LinkedList<Asteroid> asteroidList;
     LinkedList<PowerUp> powerUpList;
 
-    float resetTime, resetFrameTime = 4f;
+    private float resetTime;
+    private final float resetFrameTime = 4f;
+    private final float hitAnimationEnd = 2f;
+    private float animationTimeCounter = 0f;
+    private final float blinkTimePause = 0.5f;
+
 
     MainScreen game;
 
@@ -82,8 +87,7 @@ class GameScreen implements Screen {
         batch = new SpriteBatch();
     }
 
-    float hitAnimationEnd = 2f;
-    float animationTimeCounter;
+
     @Override
     public void render(float deltaTime) {
         batch.begin();
@@ -301,11 +305,12 @@ class GameScreen implements Screen {
         }
     }
 
-    private float inverseSpawnChance = 20f;
+
     private float inverseSpawnChanceCounter ;
 
     //spawn, draw, update power ups
     private void spawnPowerUps(float delta){
+        float inverseSpawnChance = 20f;
         inverseSpawnChanceCounter+= delta;
       if(inverseSpawnChanceCounter - inverseSpawnChance > 0){
           if(powerUpList.size() < 1)
@@ -539,7 +544,6 @@ class GameScreen implements Screen {
 
 
         enemyListIterator = enemyList.listIterator();
-        ListIterator<Enemy> enemyListIteratorCollision ;
         while(enemyListIterator.hasNext()){
             Enemy enemy  = enemyListIterator.next();
             enemyListIterator = enemyList.listIterator();
@@ -567,8 +571,9 @@ class GameScreen implements Screen {
     }
 
     private float isBigCounter;
-    private float isBigTimeLapse = 10f;
+
     private void IsBigTimeline(float delta){
+        float isBigTimeLapse = 10f;
         if(isBig){
             player.setTexture(Art.bigPlayerTexture);
             isBigCounter+= delta;
@@ -592,6 +597,8 @@ class GameScreen implements Screen {
             }
         }
     }
+
+
     private void handleExpiredBullets(){
         ListIterator<Bullet> bulletIterator = bulletList.listIterator();
         while (bulletIterator.hasNext()) {

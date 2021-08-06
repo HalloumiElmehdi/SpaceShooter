@@ -9,7 +9,12 @@ import com.badlogic.gdx.math.Vector2;
 public class Bullet extends Entity {
     public Bullet(){
         this.texture = Art.smallBulletTexture;
-        this.position = new Vector2(Player.getInstance().position.x + (Player.getInstance().texture.getWidth()/2) - this.texture.getWidth()/2 ,Player.getInstance().position.y + (Player.getInstance().texture.getHeight()/2) - this.texture.getHeight()/2);
+        this.position =
+                new Vector2(Player.getInstance().position.x +
+                        (Player.getInstance().Width()/2) - this.Width()/2 ,
+                        Player.getInstance().position.y +
+                                (Player.getInstance().Height()/2) -
+                                this.Height()/2);
         this.box2D = new Rectangle(this.position.x, this.position.y, this.Width(), this.Height());
         this.velocity = 600f;
         this.life = 1;
@@ -23,12 +28,12 @@ public class Bullet extends Entity {
         batch.draw(this.texture ,
                 this.position.x,
                 this.position.y,
-                this.texture.getWidth()/2,
-                this.texture.getHeight()/2,
-                this.texture.getWidth() ,
-                this.texture.getHeight(), 1 , 1 , angle, 0,0,
-                this.texture.getWidth(),
-                this.texture.getHeight() , false, true
+                this.Width()/2,
+                this.Height()/2,
+                this.Width() ,
+                this.Height(), 1 , 1 , angle, 0,0,
+                this.Width(),
+                this.Height() , false, true
         );
 
     }

@@ -2,19 +2,11 @@ package com.mygdx.game;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
-import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Batch;
-import com.badlogic.gdx.graphics.g2d.Sprite;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.badlogic.gdx.graphics.g2d.TextureRegion;
-import com.badlogic.gdx.math.Circle;
-import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector2;
 
-import java.util.LinkedList;
 
 public final class Player extends Entity {
 
@@ -22,10 +14,7 @@ public final class Player extends Entity {
     private  float spawnTimeshots = 0.1f;
     private  float lastTimeShot;
     public boolean canShoot = false;
-    public boolean isDead ;
     public int score ;
-
-
 
     private Player()
     {
@@ -43,12 +32,6 @@ public final class Player extends Entity {
             instance = new Player();
         }
         return instance;
-    }
-
-
-    public boolean addBonusLife(){
-        this.life += 1;
-        return false;
     }
 
 
@@ -73,14 +56,14 @@ public final class Player extends Entity {
 
     public void draw(Batch batch) {
         batch.draw(this.texture ,
-                        this.position.x,
-                        this.position.y,
-                this.texture.getWidth()/2,
-                this.texture.getHeight()/2,
-                        this.texture.getWidth() ,
-                        this.texture.getHeight(), 1 , 1 , angle, 0,0,
-                        this.texture.getWidth(),
-                        this.texture.getHeight() , false, false
+                this.position.x,
+                this.position.y,
+                this.Width()/2,
+                this.Height()/2,
+                this.Width() ,
+                this.Height(), 1 , 1 , angle, 0,0,
+                this.Width(),
+                this.Height() , false, false
         );
 
 
@@ -91,9 +74,9 @@ public final class Player extends Entity {
     private void handleInput(float delta){
         if (Gdx.input.isKeyPressed(Input.Keys.Q) && position.x > 0)
             this.position.x -= this.velocity  * delta;
-        if (Gdx.input.isKeyPressed(Input.Keys.D) && this.position.x < Gdx.graphics.getWidth() - this.texture.getWidth())
+        if (Gdx.input.isKeyPressed(Input.Keys.D) && this.position.x < Gdx.graphics.getWidth() - this.Width())
             this.position.x += this.velocity * delta;
-        if (Gdx.input.isKeyPressed(Input.Keys.Z) && this.position.y < Gdx.graphics.getHeight() - this.texture.getHeight())
+        if (Gdx.input.isKeyPressed(Input.Keys.Z) && this.position.y < Gdx.graphics.getHeight() - this.Height())
             this.position.y += this.velocity * delta;
         if (Gdx.input.isKeyPressed(Input.Keys.S) && this.position.y > 0)
             this.position.y -= this.velocity * delta;

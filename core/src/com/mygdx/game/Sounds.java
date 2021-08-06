@@ -12,8 +12,6 @@ public class Sounds {
     static Sound gameOverSound;
     static Sound powerUpSound;
 
-
-
     static void load(){
         menuMusic = Gdx.audio.newMusic(Gdx.files.internal("sounds/menuMusic.mp3"));
         gameMusic = Gdx.audio.newMusic(Gdx.files.internal("sounds/bgMusic.mp3"));

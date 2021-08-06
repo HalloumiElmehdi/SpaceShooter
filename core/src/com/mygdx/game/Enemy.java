@@ -7,33 +7,27 @@ import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector2;
 
 public class Enemy extends Entity {
-    private Texture redShadowTexture;
     public static float speed ;
     public boolean isHit = false;
     private float hitCounter ;
-    private float timeBetweenHit = 1f;
     public Enemy()
     {
         this.texture = Art.enemyTexture;
         this.position = generateSpawnPosition();
         this.box2D = new Rectangle(this.position.x, this.position.y, this.Width(), this.Height());
         this.life = 10;
-        this.redShadowTexture = new Texture(Gdx.files.internal("enemies/enemyHitBox.png"));
     }
 
-
-
-
     public void draw(Batch batch) {
-        this.direction = new Vector2((Player.getInstance().position.x - position.x) + this.texture.getWidth()/2f
-                ,  Player.getInstance().position.y  - position.y  + this.texture.getHeight()/2f);
+        this.direction = new Vector2((Player.getInstance().position.x - position.x) + this.Width()/2f
+                ,  Player.getInstance().position.y  - position.y  + this.Height()/2f);
         direction = direction.nor();
         this.angle = (float)(Math.atan2(direction.x, direction.y));
         angle = (float)Math.toDegrees(angle);
         angle *= -1;
 
         if(isHit){
-            batch.draw(this.redShadowTexture ,
+            batch.draw(Art.enemyHitBoxTexture ,
                     this.position.x,
                     this.position.y,
                     this.Width()/2,
@@ -41,8 +35,8 @@ public class Enemy extends Entity {
                     this.Width(),
                     this.Height(),
                     1 , 1, angle, 0, 0,
-                    (int)this.Width(),
-                    (int)this.Height(),
+                    this.Width(),
+                    this.Height(),
                     false,
                     false
             );
@@ -55,8 +49,8 @@ public class Enemy extends Entity {
                    this.Width(),
                    this.Height(),
                    1 , 1, angle, 0, 0,
-                  (int)this.Width(),
-                  (int)this.Height(),
+                   this.Width(),
+                   this.Height(),
                     false,
                     false
         );
@@ -65,6 +59,7 @@ public class Enemy extends Entity {
     }
 
     public void update(float delta) {
+        float timeBetweenHit = 1f;
         hitCounter+= delta;
         if(hitCounter - timeBetweenHit > 0){
             isHit = false;
@@ -98,10 +93,6 @@ public class Enemy extends Entity {
             case 3: chosen = UpRandomPosition; break;
             default: chosen = BottomRandomPosition; break;
         }
-
         return chosen;
     }
-
-
-
 }

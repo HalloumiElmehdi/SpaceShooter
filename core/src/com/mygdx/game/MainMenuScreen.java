@@ -15,31 +15,29 @@ import com.badlogic.gdx.utils.Align;
 
 public class MainMenuScreen implements Screen {
 
-    private ScrollingBackground parallaxBackground;
-    private SpriteBatch batch;
+    private final ScrollingBackground parallaxBackground;
+    private final SpriteBatch batch;
+    private final int WORLD_WIDTH = 1280;
+    private final int WORLD_HEIGHT = 720;
 
-    //
-    private  int EXIT_BUTTON_WIDTH ;
-    private  int PLAY_BUTTON_WIDTH ;
-    private  int EXIT_BUTTON_HEIGHT ;
-    private  int PLAY_BUTTON_HEIGHT ;
-    private final int WORLD_WIDTH = 1280;;
-    private final int WORLD_HEIGHT = 720;;
+    // Menu
+    private final int EXIT_BUTTON_WIDTH ;
+    private final int PLAY_BUTTON_WIDTH ;
+    private final int EXIT_BUTTON_HEIGHT ;
+    private final int PLAY_BUTTON_HEIGHT ;
+    private final Vector2 EXIT_BUTTON_POSITION;
+    private final Vector2 PLAY_BUTTON_POSITION;
 
-    private Vector2 EXIT_BUTTON_POSITION;
-    private Vector2 PLAY_BUTTON_POSITION;
-    //Game
-    MainScreen game;
-    //title
-    private String title;
-    //
-    private boolean isGameOver;
-    private  int score;
+    private MainScreen game;
+    private final String title;
+    private final boolean isGameOver;
+    private final int score;
 
-
-    private int xHotspot, yHotspot;
-    private Cursor cursor;
-    private Pixmap pixmap;
+    // Cursor
+    private final int xHotspot;
+    private final int yHotspot;
+    private final Cursor cursor;
+    private final Pixmap pixmap;
 
     public MainMenuScreen(MainScreen game, String title, int score){
         pixmap = Art.cursorTexture;
@@ -74,7 +72,7 @@ public class MainMenuScreen implements Screen {
         //
         prepareHeaderFont();
         prepareFooterFont();
-        prepareCommandfont();
+        prepareFont();
 
     }
 
@@ -119,21 +117,19 @@ public class MainMenuScreen implements Screen {
     }
 
 
-    private void prepareCommandfont(){
-        FreeTypeFontGenerator fontGenerator = new FreeTypeFontGenerator(Gdx.files.internal("fonts/galaxy.otf"));
+    private void prepareFont(){
         FreeTypeFontGenerator.FreeTypeFontParameter fontParameter = new FreeTypeFontGenerator.FreeTypeFontParameter();
-
         fontParameter.size = 25;
         fontParameter.borderWidth = 3.6f;
         fontParameter.color = new Color(1, 1, 1, 0.5f);
         fontParameter.borderColor = new Color(0, 0, 0, 0.3f);
-        Art.commandFont = fontGenerator.generateFont(fontParameter);
+        Art.commandFont = Art.fontGenerator.generateFont(fontParameter);
 
         fontParameter.size = 25;
         fontParameter.borderWidth = 3.6f;
         fontParameter.color = new Color(1, 1, 1, 0.5f);
         fontParameter.borderColor = new Color(1, 1, 1, 0.3f);
-        Art.commandFontKeys = fontGenerator.generateFont(fontParameter);
+        Art.commandFontKeys = Art.fontGenerator.generateFont(fontParameter);
     }
 
 
@@ -182,9 +178,7 @@ public class MainMenuScreen implements Screen {
         if(isGameOver){
             drawScore(this.score);
         }
-
             if ((Gdx.input.getX() >= PX1 && Gdx.input.getX() <= PX2) && ((Gdx.input.getY() <= PY1 && Gdx.input.getY() >= PY2))) {
-
                 batch.draw(Art.playButtonActiveTexture, PLAY_BUTTON_POSITION.x, PLAY_BUTTON_POSITION.y);
                 if (Gdx.input.isButtonJustPressed(Input.Buttons.LEFT)) {
                     Sounds.menuMusic.stop();
@@ -194,7 +188,6 @@ public class MainMenuScreen implements Screen {
             } else {
                 batch.draw(Art.playButtonTexture, PLAY_BUTTON_POSITION.x, PLAY_BUTTON_POSITION.y);
             }
-
             if ((Gdx.input.getX() >= EX1 && Gdx.input.getX() <= EX2) && ((Gdx.input.getY() <= EY1 && Gdx.input.getY() >= EY2)) ) {
                 batch.draw(Art.exitButtonActiveTexture, EXIT_BUTTON_POSITION.x, EXIT_BUTTON_POSITION.y);
                 if (Gdx.input.isButtonJustPressed(Input.Buttons.LEFT)) {

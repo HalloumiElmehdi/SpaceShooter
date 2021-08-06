@@ -1,18 +1,13 @@
 package com.mygdx.game;
 
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector2;
 
-import java.util.Random;
-
 public class Asteroid extends Entity {
 
-
-    float timeSincelastRandom ;
-    float timeToupdate = 5f;
+    private float timeSincelastRandom ;
+    private final float timeUntilNextUpdate = 5f;
     double randX, randY;
     public static float speed ;
     public Asteroid(){
@@ -25,8 +20,8 @@ public class Asteroid extends Entity {
 
 
     public void draw(Batch batch){
-        this.direction = new Vector2(((float)randX - position.x) + this.texture.getWidth()/2f
-                ,  (float)randY  - position.y  + this.texture.getHeight()/2f);
+        this.direction = new Vector2(((float)randX - position.x) + this.Width()/2f
+                ,  (float)randY  - position.y  + this.Height()/2f);
         direction = direction.nor();
         this.angle = (float)(Math.atan2(direction.x, direction.y));
         angle = (float)Math.toDegrees(angle);
@@ -40,8 +35,8 @@ public class Asteroid extends Entity {
                 this.Width(),
                 this.Height(),
                 1 , 1, angle, 0, 0,
-                (int)this.Width(),
-                (int)this.Height(),
+                this.Width(),
+                this.Height(),
                 false,
                 false
         );
@@ -52,8 +47,8 @@ public class Asteroid extends Entity {
 
 
     public void update(float delta){
-        timeSincelastRandom+= delta;
-        if(timeSincelastRandom - timeToupdate > 0){
+        this.timeSincelastRandom+= delta;
+        if(timeSincelastRandom - timeUntilNextUpdate > 0){
            randX = Math.random() * 1280 - this.Width();
            randY = Math.random() * 720 - this.Height();
            if(randX < 0)
@@ -61,7 +56,7 @@ public class Asteroid extends Entity {
            if(randY < 0)
                randY = Math.random() * 200;
 
-         timeSincelastRandom = 0;
+         this.timeSincelastRandom = 0;
         }
         this.angle = (float) Math
                 .atan2( randX - this.position.x, randY - this.position.y);

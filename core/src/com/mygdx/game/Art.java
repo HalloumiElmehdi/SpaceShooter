@@ -18,7 +18,7 @@ public class Art {
      static Texture bigPlayerTexture;
      static Texture powerUpTexture;
      static Texture hitAnimationTexture;
-     static Texture enemyHitBox;
+     static Texture enemyHitBoxTexture;
      static Texture explosionTexture;
      static Pixmap cursorTexture;
      static Array<Texture> liveTextures;
@@ -29,7 +29,6 @@ public class Art {
      static Texture exitButtonTexture;
      static Texture playButtonActiveTexture;
      static Texture exitButtonActiveTexture;
-     static Texture bg;
      static BitmapFont fontHeader;
      static BitmapFont fontFooter;
      static BitmapFont commandFont;
@@ -60,7 +59,7 @@ public class Art {
          bigPlayerTexture = new Texture(Gdx.files.internal("player/bigPlayer.png"));
          powerUpTexture = new Texture(Gdx.files.internal("player/player.png"));
          hitAnimationTexture = new Texture(Gdx.files.internal("player/hitAnimation.png"));
-         enemyHitBox = new Texture(Gdx.files.internal("enemies/enemyHitBox.png"));
+         enemyHitBoxTexture = new Texture(Gdx.files.internal("enemies/enemyHitBox.png"));
          cursorTexture = new Pixmap(Gdx.files.internal("cursor/cursor1.png"));
          explosionTexture = new Texture(Gdx.files.internal("explosions/explosion1.png"));
          playButtonTexture = new Texture(Gdx.files.internal("menu/playRed.png"));

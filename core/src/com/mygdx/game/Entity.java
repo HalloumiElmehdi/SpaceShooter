@@ -1,14 +1,10 @@
 package com.mygdx.game;
 
 import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.math.Circle;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector2;
-import com.badlogic.gdx.scenes.scene2d.Actor;
 
 public class Entity {
-
-
 
     // attributes
     protected Texture texture;
@@ -20,12 +16,8 @@ public class Entity {
     public Rectangle box2D;
 
     //methods
-
     public Rectangle getBox2D(){
         return this.box2D;
-    }
-    public Texture getTexture() {
-        return texture;
     }
     public Vector2 getPosition() {
         return position;
@@ -34,8 +26,8 @@ public class Entity {
         return direction;
     }
 
-    public float Width(){return this.texture.getWidth();}
-    public float Height(){return this.texture.getHeight();}
+    public int Width(){return this.texture.getWidth();}
+    public int Height(){return this.texture.getHeight();}
     public boolean isColliding(Rectangle rec){
         return this.box2D.overlaps(rec);
     }
