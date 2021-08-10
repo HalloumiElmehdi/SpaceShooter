@@ -13,8 +13,6 @@ import java.util.LinkedList;
 import java.util.ListIterator;
 import java.util.Locale;
 
-
-
 class GameScreen implements Screen {
     //graphics
     private final SpriteBatch batch;
@@ -60,7 +58,6 @@ class GameScreen implements Screen {
     private float animationTimeCounter = 0f;
     private final float blinkTimePause = 0.5f;
 
-
     MainScreen game;
 
     //constructor
@@ -87,7 +84,6 @@ class GameScreen implements Screen {
         batch = new SpriteBatch();
     }
 
-
     @Override
     public void render(float deltaTime) {
         batch.begin();
@@ -110,8 +106,7 @@ class GameScreen implements Screen {
                     animationTimeCounter = 0;
                 }
            }
-            updateAndRenderHUD();
-
+           updateAndRenderHUD();
 
            if(!isPause){
                Sounds.gameMusic.play();
@@ -608,6 +603,7 @@ class GameScreen implements Screen {
             }
         }
     }
+
     private void gameOverExplosion(){
         bulletList.clear();
         ListIterator<Enemy> enemyListIterator = enemyList.listIterator();

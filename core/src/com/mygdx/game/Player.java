@@ -9,7 +9,6 @@ import com.badlogic.gdx.math.Vector2;
 
 
 public final class Player extends Entity {
-
     private static Player instance;
     private  float spawnTimeshots = 0.1f;
     private  float lastTimeShot;
@@ -32,6 +31,9 @@ public final class Player extends Entity {
             instance = new Player();
         }
         return instance;
+    }
+    public static void  resetInstance(){
+        instance = null;
     }
 
 
