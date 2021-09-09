@@ -1,3 +1,4 @@
+
 package com.mygdx.game.screens.game;
 
 import com.badlogic.gdx.Gdx;
@@ -5,8 +6,9 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator;
+import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.Align;
-import com.mygdx.game.utils.Art;
+import com.mygdx.game.ressources.Art;
 import com.mygdx.game.Config;
 import com.mygdx.game.entities.Player;
 
@@ -65,9 +67,12 @@ public class HUD {
         font.draw(batch, String.format(Locale.getDefault(), "%02d", Player.getInstance().life), hudRightX, hudRow2Y, hudSectionWidth, Align.right, false);
         if(Player.getInstance().isBig) {
             fontTime.draw(batch, String.format(Locale.getDefault(), "%02d", (int)countdown), Gdx.graphics.getWidth() - 600, hudRow1Y , hudSectionWidth, Align.right, false);
+                batch.draw(Art.powerUpTexture, Gdx.graphics.getWidth() - 200  , hudRow2Y - 35 , Art.powerUpTexture.getWidth()/2, Art.powerUpTexture.getHeight()/2);
         }
         if(Player.getInstance().hasSpeed) {
             fontTime.draw(batch, String.format(Locale.getDefault(), "%02d", (int)countdownSpeed), Gdx.graphics.getWidth() - 700, hudRow1Y , hudSectionWidth, Align.right, false);
+           // batch.draw(Art.powerUpTexture, Gdx.graphics.getWidth() - 200  , hudRow2Y - Art.powerUpTexture.getHeight() , Art.powerUpTexture.getWidth()/2, Art.powerUpTexture.getHeight()/2);
+
         }
 
 

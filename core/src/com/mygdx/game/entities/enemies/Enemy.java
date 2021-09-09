@@ -4,11 +4,10 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.math.Vector2;
-import com.mygdx.game.utils.Art;
+import com.mygdx.game.entities.Bullet;
+import com.mygdx.game.ressources.Art;
 import com.mygdx.game.entities.Entity;
 import com.mygdx.game.entities.Player;
-
-import org.w3c.dom.Text;
 
 public class Enemy extends Entity {
     public boolean isHit;
@@ -39,8 +38,14 @@ public class Enemy extends Entity {
         );
     }
 
-    protected void drawEnemyLives(Batch batch){
-        batch.draw(Art.liveTextures.get(this.life), position.x  , position.y + (this.Height()/2f)  + this.Height()/2f, 40, 6);
+    protected void drawEnemyLives(Batch batch) {
+        if(this instanceof Criminal)
+            batch.draw(Art.liveTextures.get(this.life), position.x  , position.y + (this.Height()/2f)  + this.Height()/2f, 40, 6);
+
+        if(this instanceof Tricky) {
+            batch.draw(Art.liveTextures.get(this.life), position.x  , position.y + (this.Height()/2f)  + this.Height()/2f, 30, 4.5f);
+        }
+
     }
     protected void drawHitEffect(Batch batch, Texture hitTexture){
         if(isHit){
@@ -96,5 +101,16 @@ public class Enemy extends Entity {
         this.position.y += (float) Math.sin(angle) * velocity
                 * delta;
     }
+
+    public static Criminal createCriminal() {
+        return new Criminal();
+    }
+    public static Tricky createTricky() {
+        return new Tricky();
+    }
+    public static Asteroid createAsteroid() {
+        return new Asteroid();
+    }
+
 
 }

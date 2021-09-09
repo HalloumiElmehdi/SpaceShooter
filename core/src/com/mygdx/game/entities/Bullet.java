@@ -1,13 +1,9 @@
 package com.mygdx.game.entities;
 
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Batch;
-import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector2;
-import com.mygdx.game.utils.Art;
-import com.mygdx.game.entities.Entity;
-import com.mygdx.game.entities.Player;
+import com.mygdx.game.ressources.Art;
 
 
 public class Bullet extends Entity {
@@ -62,6 +58,10 @@ public class Bullet extends Entity {
         this.position.y += (float) Math.sin(rotationAngle) * this.velocity
                 * delta;
 
+    }
+
+    public static Bullet create() {
+        return new Bullet();
     }
 
 }

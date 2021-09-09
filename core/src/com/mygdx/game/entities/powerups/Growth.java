@@ -4,11 +4,11 @@ import com.badlogic.gdx.math.Vector2;
 import com.mygdx.game.entities.Bullet;
 import com.mygdx.game.entities.Player;
 import com.mygdx.game.screens.game.HUD;
-import com.mygdx.game.utils.Art;
+import com.mygdx.game.ressources.Art;
 
 public class Growth extends PowerUp{
     public Growth(){
-        super(Art.bigPlayerTexture,
+        super(Art.powerUpTexture,
                 new Vector2(),
                 0f,
                 1
@@ -22,5 +22,9 @@ public class Growth extends PowerUp{
         Player.getInstance().life++;
         Player.getInstance().isBig = true;
         Bullet.power = 2f;
+    }
+
+    public static Growth create() {
+        return new Growth();
     }
 }

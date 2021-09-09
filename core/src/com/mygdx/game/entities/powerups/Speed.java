@@ -1,10 +1,9 @@
 package com.mygdx.game.entities.powerups;
 
 import com.badlogic.gdx.math.Vector2;
-import com.mygdx.game.entities.Bullet;
 import com.mygdx.game.entities.Player;
 import com.mygdx.game.screens.game.HUD;
-import com.mygdx.game.utils.Art;
+import com.mygdx.game.ressources.Art;
 
 public class Speed extends PowerUp{
     public Speed(){
@@ -18,6 +17,10 @@ public class Speed extends PowerUp{
         HUD.countdownSpeed = 30;
         Player.getInstance().hasSpeed = true;
         Player.getInstance().velocity *= 2;
+    }
+
+    public static Speed create() {
+        return new Speed();
     }
 
 }

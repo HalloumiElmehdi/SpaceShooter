@@ -1,7 +1,7 @@
 package com.mygdx.game.entities.enemies;
 
 import com.badlogic.gdx.graphics.g2d.Batch;
-import com.mygdx.game.utils.Art;
+import com.mygdx.game.ressources.Art;
 
 public class Criminal extends Enemy{
         public Criminal(){

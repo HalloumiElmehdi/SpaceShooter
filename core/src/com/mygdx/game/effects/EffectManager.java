@@ -4,12 +4,11 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Rectangle;
-import com.mygdx.game.datastructure.CircularSinglyLinkedList;
-import com.mygdx.game.datastructure.Node;
 import com.mygdx.game.entities.EntityManager;
 import com.mygdx.game.entities.Player;
 import com.mygdx.game.entities.enemies.Enemy;
-import com.mygdx.game.utils.Art;
+import com.mygdx.game.entities.powerups.PowerUp;
+import com.mygdx.game.ressources.Art;
 
 import java.util.ArrayList;
 import java.util.ListIterator;
@@ -48,11 +47,15 @@ public class EffectManager {
             }
         }
     }
-    public static void gameOverExplosion(){
-        EntityManager.bullets.clear();
-        for (Enemy enemy: EntityManager.enemies) {
+    public static void gameOverExplosion() {
+
+        EffectManager.createExplosion(new Rectangle(player.bounds.x - player.Width(), player.bounds.y - player.Height(), 256, 256), 2f);
+
+        for (Enemy enemy: EntityManager.enemies)
             EffectManager.createExplosion(enemy.bounds, 1.6f);
-        }
-        EffectManager.createExplosion(player.bounds, 2f);
+
+        for(PowerUp powerUp : EntityManager.powerUps)
+            EffectManager.createExplosion(powerUp.bounds, 1.6f);
+
     }
 }

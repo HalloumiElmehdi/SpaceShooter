@@ -4,7 +4,6 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.math.Vector2;
-import com.mygdx.game.utils.Art;
 import com.mygdx.game.entities.Entity;
 
 public abstract class PowerUp extends Entity {
@@ -52,6 +51,7 @@ public abstract class PowerUp extends Entity {
         );
     }
     public abstract void feature();
+
 }
 
 

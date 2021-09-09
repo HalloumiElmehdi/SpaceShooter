@@ -12,9 +12,9 @@ import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.Align;
 import com.mygdx.game.common.ScrollingBackground;
-import com.mygdx.game.utils.Art;
+import com.mygdx.game.ressources.Art;
 import com.mygdx.game.Config;
-import com.mygdx.game.utils.Sounds;
+import com.mygdx.game.ressources.Sounds;
 import com.mygdx.game.entities.Player;
 import com.mygdx.game.screens.game.GameScreen;
 
@@ -80,6 +80,7 @@ public class MainMenuScreen implements Screen {
         prepareFooterFont();
         prepareFont();
     }
+
 
     private void drawHeader() {
         Art.fontHeader.draw(batch, title, 500, 650, 300, Align.center, false);

@@ -2,11 +2,9 @@ package com.mygdx.game.entities;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
-import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Batch;
-import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector2;
-import com.mygdx.game.utils.Art;
+import com.mygdx.game.ressources.Art;
 
 
 public  class Player extends Entity {
@@ -27,7 +25,7 @@ public  class Player extends Entity {
         super(Art.playerTexture,
                 new Vector2(Gdx.graphics.getWidth() /2f, Gdx.graphics.getHeight()/2f),
                 200f,
-                10);
+                100);
         this.canShoot = false;
         this.isBig = false;
         this.hasSpeed = false;
@@ -99,6 +97,7 @@ public  class Player extends Entity {
                 canShoot = true;
                 lastTimeShot = 0;
             }
+
             else
             {
                 canShoot = false;

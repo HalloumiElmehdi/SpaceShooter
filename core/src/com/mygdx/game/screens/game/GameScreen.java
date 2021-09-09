@@ -3,14 +3,15 @@ package com.mygdx.game.screens.game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.Screen;
+import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.mygdx.game.effects.EffectManager;
 import com.mygdx.game.entities.EntityManager;
 import com.mygdx.game.entities.Player;
-import com.mygdx.game.utils.Art;
+import com.mygdx.game.ressources.Art;
 import com.mygdx.game.Config;
 import com.mygdx.game.common.ScrollingBackground;
-import com.mygdx.game.utils.Sounds;
+import com.mygdx.game.ressources.Sounds;
 import com.mygdx.game.screens.MainMenuScreen;
 import com.mygdx.game.screens.MainScreen;
 
@@ -21,7 +22,7 @@ public class GameScreen implements Screen {
     private final ScrollingBackground parallaxBackground = ScrollingBackground.getInstance();
     private boolean win = false;
     private boolean isPause = false;
-    private boolean gameOver = false;
+    private boolean gameOver = Player.getInstance().life == 0;
     private boolean blink = false ;
     private float blinkTimeCounter;
     private float resetTime;
@@ -34,7 +35,7 @@ public class GameScreen implements Screen {
     public GameScreen(MainScreen game){
         this.game = game;
         parallaxBackground.setSpeed(0.5f);
-        Sounds.gameMusic.setVolume(Config.volume);
+        Sounds.gameMusic.setVolume(Sounds.volume);
         Sounds.gameMusic.setLooping(true);
         HUD = new HUD();
     }
@@ -44,12 +45,11 @@ public class GameScreen implements Screen {
         batch.begin();
         drawBackground();
         EffectManager.updateAndDrawExplosions(deltaTime, batch);
-        handleChangeVolume(deltaTime);
-       if(!gameOver){
+       if(!gameOver) {
            drawHUD(deltaTime);
-           pauseResumeGame();
+           handleCommands(deltaTime);
            EntityManager.drawEntities(batch);
-           if(!isPause){
+           if(!isPause) {
                EntityManager.handleBulletShoot();
                EntityManager.spawnEntities(deltaTime);
                EntityManager.updateEntities(deltaTime);
@@ -58,8 +58,8 @@ public class GameScreen implements Screen {
                EntityManager.updateLevel();
                updateHUD(deltaTime);
                Sounds.gameMusic.play();
-           }else
-           {
+           }
+           else {
                drawPauseButton(deltaTime);
                Sounds.gameMusic.pause();
            }
@@ -70,7 +70,7 @@ public class GameScreen implements Screen {
             resetTime+= deltaTime;
             float resetFrameTime = 4f;
             if( resetTime - resetFrameTime > 0){
-                game.setScreen(new MainMenuScreen(game, "GAME OVER",EntityManager.player.score));
+                game.setScreen(new MainMenuScreen(game, "GAME OVER", EntityManager.player.score));
             }
         }
         batch.end();
@@ -79,8 +79,7 @@ public class GameScreen implements Screen {
         parallaxBackground.draw(batch);
         parallaxBackground.update();
     }
-    /*
-     */
+
     private void drawHUD(float deltaTIme){
         HUD.draw(batch, Player.getInstance().level, deltaTIme);
     }
@@ -99,37 +98,40 @@ public class GameScreen implements Screen {
             batch.draw(Art.pauseBtnRedTexture, Gdx.graphics.getWidth()/2 - (Art.pauseBtnRedTexture.getWidth()/2), Gdx.graphics.getHeight()/2, Art.pauseBtnRedTexture.getWidth(), Art.pauseBtnRedTexture.getHeight());
         }
     }
+
     private void updateHUD(float deltaTime){
         HUD.update(deltaTime);
     }
-    private void pauseResumeGame(){
-        if(Gdx.input.isKeyJustPressed(Input.Keys.P)){
-            isPause = !isPause;
-        }
-    }
-    private void handleChangeVolume(float delta){
-        if(Gdx.input.isKeyPressed(Input.Keys.DOWN)){
-            Config.volume-= delta;
-            if(Config.volume < 0)
-                Config.volume = 0f;
 
-            Sounds.gameMusic.setVolume(Config.volume);
+    private void handleCommands(float delta) {
+        if(Gdx.input.isKeyJustPressed(Input.Keys.P)) {
+            if(isPause)
+                resume();
+            else
+                pause();
         }
-        if(Gdx.input.isKeyPressed(Input.Keys.UP)){
-            Config.volume+= delta;
-            if(Config.volume > 1)
-                Config.volume = 1f;
-            Sounds.gameMusic.setVolume(Config.volume);
+
+        if(Gdx.input.isKeyPressed(Input.Keys.DOWN)) {
+            Sounds.decreaseVolume(delta);
+        }
+
+        if(Gdx.input.isKeyPressed(Input.Keys.UP)) {
+            Sounds.increaseVolume(delta);
         }
     }
+
     @Override
     public void resize(int width, int height) {
 
     }
     @Override
-    public void pause() {}
+    public void pause() {
+        isPause = true;
+    }
     @Override
-    public void resume() {}
+    public void resume() {
+        isPause = false;
+    }
     @Override
     public void hide() {}
     @Override

@@ -1,8 +1,7 @@
 package com.mygdx.game.entities.enemies;
 
-import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Batch;
-import com.mygdx.game.utils.Art;
+import com.mygdx.game.ressources.Art;
 import com.mygdx.game.entities.Player;
 
 public class Tricky extends Enemy {
@@ -32,7 +31,7 @@ public class Tricky extends Enemy {
     @Override
     public void draw(Batch batch) {
         super.draw(batch);
-        drawHitEffect(batch, Art.criminalHitBoxTexture);
+        drawHitEffect(batch, Art.trickyHitBoxTexture);
         drawEnemyLives(batch);
     }
 

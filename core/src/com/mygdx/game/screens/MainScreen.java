@@ -1,9 +1,8 @@
 package com.mygdx.game.screens;
 
 import com.badlogic.gdx.Game;
-import com.mygdx.game.screens.MainMenuScreen;
-import com.mygdx.game.utils.Art;
-import com.mygdx.game.utils.Sounds;
+import com.mygdx.game.ressources.Art;
+import com.mygdx.game.ressources.Sounds;
 
 public class MainScreen extends Game {
 

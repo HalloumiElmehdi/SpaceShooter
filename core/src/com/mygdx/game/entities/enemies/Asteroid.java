@@ -1,9 +1,8 @@
 package com.mygdx.game.entities.enemies;
 
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.math.Vector2;
-import com.mygdx.game.utils.Art;
+import com.mygdx.game.ressources.Art;
 
 import java.util.Random;
 

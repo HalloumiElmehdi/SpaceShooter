@@ -1,4 +1,4 @@
-package com.mygdx.game.utils;
+package com.mygdx.game.ressources;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Pixmap;
@@ -20,6 +20,7 @@ public class Art {
     public static Texture powerUpSpeedTexture;
     public static Texture hitAnimationTexture;
     public static Texture criminalHitBoxTexture;
+    public static Texture trickyHitBoxTexture;
     public static Texture explosionTexture;
     public static Pixmap cursorTexture;
     public static Texture smallBulletTexture;
@@ -60,10 +61,11 @@ public class Art {
          trickyTexture = new Texture(Gdx.files.internal("enemies/tricky.png"));
          playerTexture = new Texture(Gdx.files.internal("player/player.png"));
          bigPlayerTexture = new Texture(Gdx.files.internal("player/bigPlayer.png"));
-         powerUpTexture = new Texture(Gdx.files.internal("player/player.png"));
+         powerUpTexture = new Texture(Gdx.files.internal("powerUps/shield.png"));
          powerUpSpeedTexture = new Texture(Gdx.files.internal("powerUps/speed.png"));
          hitAnimationTexture = new Texture(Gdx.files.internal("player/hitAnimation.png"));
          criminalHitBoxTexture = new Texture(Gdx.files.internal("enemies/criminalHitBox.png"));
+         trickyHitBoxTexture = new Texture(Gdx.files.internal("enemies/trickyHitBox.png"));
          cursorTexture = new Pixmap(Gdx.files.internal("cursor/cursor1.png"));
          explosionTexture = new Texture(Gdx.files.internal("explosions/explosion1.png"));
          playButtonTexture = new Texture(Gdx.files.internal("menu/playRed.png"));

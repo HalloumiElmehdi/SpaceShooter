@@ -20,19 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0511cb3a-89c3-4331-9737-ea0f25609295" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/core/assets/enemies/Ship6 (copy).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/assets/enemies/tricky.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/assets/powerUps/speed.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/com/mygdx/game/datastructure/CircularSinglyLinkedList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/com/mygdx/game/datastructure/Node.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/com/mygdx/game/effects/EffectManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/com/mygdx/game/entities/EntityManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/com/mygdx/game/entities/enemies/Criminal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/com/mygdx/game/entities/enemies/Tricky.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/com/mygdx/game/entities/powerups/Growth.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/com/mygdx/game/entities/powerups/Speed.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/com/mygdx/game/screens/game/HUD.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hs_err_pid84507.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/assets/enemies/trickyHitBox.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/assets/powerUps/shield.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/assets/powerUps/speed3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/com/mygdx/game/entities/PlayerStatus.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -43,50 +34,66 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/assets/enemies/enemy.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/assets/enemies/criminal.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/assets/enemies/enemyHitBox.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/assets/enemies/criminalHitBox.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/mygdx/game/Art.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/mygdx/game/Asteroid.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/mygdx/game/Bullet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/assets/enemies/Ship6 (copy).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/assets/enemies/tricky.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/assets/enemies/tricky.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/assets/powerUps/speed.png" beforeDir="false" afterPath="$PROJECT_DIR$/core/assets/powerUps/speed.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/mygdx/game/Config.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/com/mygdx/game/Config.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/mygdx/game/Enemy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/mygdx/game/Entity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/mygdx/game/Explosion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/mygdx/game/GameScreen.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/mygdx/game/MainMenuScreen.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/mygdx/game/MainScreen.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/mygdx/game/Player.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/mygdx/game/PowerUp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/mygdx/game/ScrollingBackground.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/mygdx/game/Sounds.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/mygdx/game/common/ScrollingBackground.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/com/mygdx/game/common/ScrollingBackground.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/mygdx/game/datastructure/CircularSinglyLinkedList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/mygdx/game/datastructure/Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/mygdx/game/effects/EffectManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/com/mygdx/game/effects/EffectManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/mygdx/game/effects/Explosion.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/com/mygdx/game/effects/Explosion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/mygdx/game/entities/Bullet.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/com/mygdx/game/entities/Bullet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/mygdx/game/entities/Entity.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/com/mygdx/game/entities/Entity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/mygdx/game/entities/EntityManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/com/mygdx/game/entities/EntityManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/mygdx/game/entities/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/com/mygdx/game/entities/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/mygdx/game/entities/enemies/Asteroid.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/com/mygdx/game/entities/enemies/Asteroid.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/mygdx/game/entities/enemies/Criminal.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/com/mygdx/game/entities/enemies/Criminal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/mygdx/game/entities/enemies/Enemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/com/mygdx/game/entities/enemies/Enemy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/mygdx/game/entities/enemies/Tricky.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/com/mygdx/game/entities/enemies/Tricky.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/mygdx/game/entities/powerups/Growth.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/com/mygdx/game/entities/powerups/Growth.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/mygdx/game/entities/powerups/PowerUp.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/com/mygdx/game/entities/powerups/PowerUp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/mygdx/game/entities/powerups/Speed.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/com/mygdx/game/entities/powerups/Speed.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/mygdx/game/screens/MainMenuScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/com/mygdx/game/screens/MainMenuScreen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/mygdx/game/screens/MainScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/com/mygdx/game/screens/MainScreen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/mygdx/game/screens/game/GameScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/com/mygdx/game/screens/game/GameScreen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/mygdx/game/screens/game/HUD.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/com/mygdx/game/screens/game/HUD.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/mygdx/game/utils/Art.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/mygdx/game/utils/Sounds.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/core/build/libs/core-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/libs/core-1.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/com/mygdx/game/Art.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/mygdx/game/utils/Art.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/com/mygdx/game/Asteroid.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/mygdx/game/entities/enemies/Asteroid.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/com/mygdx/game/Bullet.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/mygdx/game/entities/Bullet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/com/mygdx/game/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/mygdx/game/Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/com/mygdx/game/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/mygdx/game/entities/enemies/Enemy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/com/mygdx/game/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/mygdx/game/entities/Entity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/com/mygdx/game/Explosion.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/mygdx/game/effects/Explosion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/com/mygdx/game/GameScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/mygdx/game/screens/game/GameScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/com/mygdx/game/MainMenuScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/mygdx/game/screens/MainMenuScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/com/mygdx/game/MainScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/mygdx/game/screens/MainScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/com/mygdx/game/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/mygdx/game/entities/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/com/mygdx/game/PowerUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/mygdx/game/entities/powerups/PowerUp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/com/mygdx/game/ScrollingBackground.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/mygdx/game/common/ScrollingBackground.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/com/mygdx/game/Sounds.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/mygdx/game/utils/Sounds.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/desktop/build/classes/java/main/com/mygdx/game/desktop/DesktopLauncher.class" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/build/classes/java/main/com/mygdx/game/desktop/DesktopLauncher.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/desktop/build/resources/main/enemies/enemy.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/desktop/build/resources/main/enemies/enemyHitBox.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/desktop/src/com/mygdx/game/desktop/DesktopLauncher.java" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/src/com/mygdx/game/desktop/DesktopLauncher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/com/mygdx/game/common/ScrollingBackground.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/mygdx/game/common/ScrollingBackground.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/com/mygdx/game/datastructure/CircularSinglyLinkedList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/com/mygdx/game/datastructure/Node.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/com/mygdx/game/effects/EffectManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/mygdx/game/effects/EffectManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/com/mygdx/game/entities/Bullet.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/mygdx/game/entities/Bullet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/com/mygdx/game/entities/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/mygdx/game/entities/Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/com/mygdx/game/entities/EntityManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/mygdx/game/entities/EntityManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/com/mygdx/game/entities/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/mygdx/game/entities/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/com/mygdx/game/entities/enemies/Asteroid.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/mygdx/game/entities/enemies/Asteroid.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/com/mygdx/game/entities/enemies/Criminal.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/mygdx/game/entities/enemies/Criminal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/com/mygdx/game/entities/enemies/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/mygdx/game/entities/enemies/Enemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/com/mygdx/game/entities/enemies/Tricky.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/mygdx/game/entities/enemies/Tricky.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/com/mygdx/game/entities/powerups/Growth.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/mygdx/game/entities/powerups/Growth.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/com/mygdx/game/entities/powerups/PowerUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/mygdx/game/entities/powerups/PowerUp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/com/mygdx/game/entities/powerups/Speed.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/mygdx/game/entities/powerups/Speed.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/com/mygdx/game/screens/MainMenuScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/mygdx/game/screens/MainMenuScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/com/mygdx/game/screens/MainScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/mygdx/game/screens/MainScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/com/mygdx/game/screens/game/GameScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/mygdx/game/screens/game/GameScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/com/mygdx/game/screens/game/HUD.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/mygdx/game/screens/game/HUD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/com/mygdx/game/utils/Art.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/mygdx/game/ressources/Art.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/com/mygdx/game/utils/Sounds.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/mygdx/game/ressources/Sounds.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/desktop/build/resources/main/enemies/Ship6 (copy).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/desktop/build/resources/main/enemies/tricky.png" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/build/resources/main/enemies/tricky.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/desktop/build/resources/main/powerUps/speed.png" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/build/resources/main/powerUps/speed.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[/home/yadev/.android/avd/Pixel_4_XL_API_30.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -156,9 +163,7 @@
         </option>
         <option name="vmOptions" value="" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
     <configuration default="true" type="JetRunConfigurationType">
@@ -209,7 +214,7 @@
       </method>
     </configuration>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -249,6 +254,52 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1816" height="270" key="GridCell.Tab.0.bottom" timestamp="1631192799757">
+      <screen x="58" y="27" width="1862" height="1053" />
+    </state>
+    <state width="1816" height="270" key="GridCell.Tab.0.bottom/58.27.1862.1053@58.27.1862.1053" timestamp="1631192799757" />
+    <state width="1816" height="270" key="GridCell.Tab.0.center" timestamp="1631192799757">
+      <screen x="58" y="27" width="1862" height="1053" />
+    </state>
+    <state width="1816" height="270" key="GridCell.Tab.0.center/58.27.1862.1053@58.27.1862.1053" timestamp="1631192799757" />
+    <state width="1816" height="270" key="GridCell.Tab.0.left" timestamp="1631192799756">
+      <screen x="58" y="27" width="1862" height="1053" />
+    </state>
+    <state width="1816" height="270" key="GridCell.Tab.0.left/58.27.1862.1053@58.27.1862.1053" timestamp="1631192799756" />
+    <state width="1816" height="270" key="GridCell.Tab.0.right" timestamp="1631192799757">
+      <screen x="58" y="27" width="1862" height="1053" />
+    </state>
+    <state width="1816" height="270" key="GridCell.Tab.0.right/58.27.1862.1053@58.27.1862.1053" timestamp="1631192799757" />
+    <state width="1816" height="275" key="GridCell.Tab.1.bottom" timestamp="1631152688588">
+      <screen x="58" y="27" width="1862" height="1053" />
+    </state>
+    <state width="1816" height="275" key="GridCell.Tab.1.bottom/58.27.1862.1053@58.27.1862.1053" timestamp="1631152688588" />
+    <state width="1816" height="275" key="GridCell.Tab.1.center" timestamp="1631152688587">
+      <screen x="58" y="27" width="1862" height="1053" />
+    </state>
+    <state width="1816" height="275" key="GridCell.Tab.1.center/58.27.1862.1053@58.27.1862.1053" timestamp="1631152688587" />
+    <state width="1816" height="275" key="GridCell.Tab.1.left" timestamp="1631152688587">
+      <screen x="58" y="27" width="1862" height="1053" />
+    </state>
+    <state width="1816" height="275" key="GridCell.Tab.1.left/58.27.1862.1053@58.27.1862.1053" timestamp="1631152688587" />
+    <state width="1816" height="275" key="GridCell.Tab.1.right" timestamp="1631152688587">
+      <screen x="58" y="27" width="1862" height="1053" />
+    </state>
+    <state width="1816" height="275" key="GridCell.Tab.1.right/58.27.1862.1053@58.27.1862.1053" timestamp="1631152688587" />
+    <state x="478" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1631180148144">
+      <screen x="58" y="27" width="1862" height="1053" />
+    </state>
+    <state x="478" y="188" width="1022" height="737" key="SettingsEditor/58.27.1862.1053@58.27.1862.1053" timestamp="1631180148144" />
+    <state x="678" y="292" width="621" height="522" key="find.popup" timestamp="1631191799539">
+      <screen x="58" y="27" width="1862" height="1053" />
+    </state>
+    <state x="678" y="292" width="621" height="522" key="find.popup/58.27.1862.1053@58.27.1862.1053" timestamp="1631191799539" />
+    <state x="685" y="300" width="598" height="514" key="refactoring.ChangeSignatureDialog" timestamp="1631147155581">
+      <screen x="58" y="27" width="1862" height="1053" />
+    </state>
+    <state x="685" y="300" width="598" height="514" key="refactoring.ChangeSignatureDialog/58.27.1862.1053@58.27.1862.1053" timestamp="1631147155581" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

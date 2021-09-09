@@ -1,4 +1,4 @@
-package com.mygdx.game.utils;
+package com.mygdx.game.ressources;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.audio.Music;
@@ -27,25 +27,40 @@ public class Sounds {
         Sounds.laserSound.setPitch(id, 1);
         Sounds.laserSound.setLooping(id, false);
     }
-    public static void gameOverExplosion(){
+    public static void gameOverVoice(){
         long id = Sounds.laserSound.play(Config.volume);
         Sounds.laserSound.setPitch(id, 1);
         Sounds.laserSound.setLooping(id, false);
     }
-    public static void gameOver(){
+    public static void playGameOverExplosion(){
         long id = Sounds.explosionSound.play(Config.volume);
         Sounds.explosionSound.setPitch(id, 0.8f);
         Sounds.explosionSound.setLooping(id, false);
     }
-    public static void powerUp(){
+    public static void PlayPowerUpSound(){
         long idPowerUp = Sounds.powerUpSound.play(1f);
         Sounds.powerUpSound.setPitch(idPowerUp, 1f);
         Sounds.powerUpSound.setLooping(idPowerUp, false);
     }
-    public static void  collisionExplosion(){
+    public static void playCollisionExplosion(){
         long id = Sounds.explosionSound.play(Config.volume);
         Sounds.explosionSound.setPitch(id, 1f);
         Sounds.explosionSound.setLooping(id, false);
     }
+
+    public static void decreaseVolume(float delta) {
+        volume-= delta;
+        if(volume < 0)
+            Sounds.volume = 0f;
+        gameMusic.setVolume(Sounds.volume);
+    }
+
+    public static void increaseVolume(float delta) {
+        volume+= delta;
+        if(volume > 1)
+            volume = 1f;
+        gameMusic.setVolume(Config.volume);
+    }
+
 }
 
